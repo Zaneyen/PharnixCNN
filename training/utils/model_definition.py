@@ -2,10 +2,10 @@
 Définition du modèle SimpleCNN_MNIST pour l'entraînement
 """
 import tensorflow as tf
+from tensorflow import keras 
 from tensorflow.keras import layers, Model
 
-
-@keras.saving.register_keras_serializable()
+@tf.keras.saving.register_keras_serializable()
 class SimpleCNN_MNIST(Model):
     """
     CNN optimisé pour MNIST
