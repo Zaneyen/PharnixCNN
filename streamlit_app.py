@@ -312,7 +312,8 @@ def load_model():
         st.error(f"❌ Modèle introuvable : {model_path}")
         st.stop()
     
-    return tf.keras.models.load_model(model_path)
+    # Charger sans compiler (évite l'erreur avec l'optimiseur)
+    return tf.keras.models.load_model(model_path, compile=False)
 
 # Charger le dataset MNIST
 @st.cache_data
