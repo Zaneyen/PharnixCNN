@@ -6,3 +6,4 @@ pillow==11.0.0
 scipy==1.14.1
 matplotlib==3.9.3
 streamlit-drawable-canvas==0.9.3
+rembg==2.0.59
