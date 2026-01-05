@@ -2,7 +2,6 @@
 Définition du modèle SimpleCNN_MNIST pour l'entraînement
 """
 import tensorflow as tf
-import keras
 from tensorflow.keras import layers, Model
 
 

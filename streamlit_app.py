@@ -1,6 +1,7 @@
 import streamlit as st
 from PIL import Image
-import keras
+import tensorflow as tf
+from tensorflow import keras
 import sys
 import os
 import numpy as np
@@ -311,13 +312,13 @@ def load_model():
         st.error(f"❌ Modèle introuvable : {model_path}")
         st.stop()
     
-    return keras.models.load_model(model_path)
+    return tf.keras.models.load_model(model_path)
 
 # Charger le dataset MNIST
 @st.cache_data
 def load_mnist_dataset():
     """Charge le dataset MNIST pour le mode test"""
-    (x_train, y_train), (x_test, y_test) = keras.datasets.mnist.load_data()
+    (x_train, y_train), (x_test, y_test) = tf.keras.datasets.mnist.load_data()
     return (x_test, y_test)
 
 model = load_model()
